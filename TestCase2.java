@@ -37,7 +37,7 @@ driver.findElement(By.linkText("Find Contacts")).click();
 driver.findElement(By.linkText("Email")).click();
 driver.findElement(By.xpath("//input[@name='emailAddress']")).sendKeys("gurusmart123@gmail.com");
 driver.findElement(By.xpath("//button[text()='Find Contacts']")).click();
-
+driver.close();
 
 
 

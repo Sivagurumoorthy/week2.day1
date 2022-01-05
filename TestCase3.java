@@ -43,9 +43,10 @@ public class TestCase3 {
 		//Enter the Last name
 		driver.findElement(By.id("createLeadForm_lastName")).sendKeys("G");
 		driver.findElement(By.id("createLeadForm_firstNameLocal")).sendKeys("SIVAGURU");
-		WebElement source = driver.findElement(By.id("createLeadForm_dataSourceId"));
-		   Select dropdown = new Select(source);
-		   dropdown.selectByVisibleText("Conference");
+		driver.findElement(By.xpath("//option[@value='LEAD_CONFERENCE']")).click();
+//		WebElement source = driver.findElement(By.id("createLeadForm_dataSourceId"));
+//		   Select dropdown = new Select(source);
+//		   dropdown.selectByVisibleText("Conference");
 
 		driver.findElement(By.id("createLeadForm_generalProfTitle")).sendKeys("MR");
 		driver.findElement(By.id("createLeadForm_generalToName")).sendKeys("SIVA GURUMOORTHY");
@@ -73,6 +74,7 @@ public class TestCase3 {
 		 WebElement Country = driver.findElement(By.id("createLeadForm_generalCountryGeoId"));
 	   Select dropbox = new Select(Country);
 	   dropbox.selectByVisibleText("India");
+	   driver.findElement(By.xpath("//option[@value='IN-TN']")).click();
 	  driver.findElement(By.className("smallSubmit")).click();
 	  
 	   
