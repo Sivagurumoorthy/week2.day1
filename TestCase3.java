@@ -69,15 +69,15 @@ public class TestCase3 {
 		driver.findElement(By.id("createLeadForm_generalAddress1")).sendKeys("114/4 PONNAGARAM 1ST STREET");
 		driver.findElement(By.id("createLeadForm_generalAddress2")).sendKeys("MELUR THOOTHUKUDI");
 		driver.findElement(By.id("createLeadForm_generalCity")).sendKeys("THOOTHUKUDI");
-		   driver.findElement(By.id("createLeadForm_generalPostalCode")).sendKeys("628002");
-	
-		 WebElement Country = driver.findElement(By.id("createLeadForm_generalCountryGeoId"));
-	   Select dropbox = new Select(Country);
-	   dropbox.selectByVisibleText("India");
-	   driver.findElement(By.xpath("//option[@value='IN-TN']")).click();
+	 driver.findElement(By.xpath("//option[@value='IL']")).click();
+	   driver.findElement(By.id("createLeadForm_generalPostalCode")).sendKeys("628002");
 	  driver.findElement(By.className("smallSubmit")).click();
-	  
-	   
+	 
+			  WebElement title = driver.findElement(By.id("sectionHeaderTitle_leads"));
+		title.getText();
+		System.out.println(title.getText());
+		
+		
 }
 
 }
